@@ -80,7 +80,6 @@ body {
 body.light-mode .theme-toggle .sun-icon { opacity: 1; transform: translateY(0) rotate(0); }
 body.light-mode .theme-toggle .moon-icon { opacity: 0; transform: translateY(-20px) rotate(-90deg); }
 
-
 /* Glass Navbar */
 .glass-nav {
     position: fixed;
@@ -200,14 +199,14 @@ body.light-mode .theme-toggle .moon-icon { opacity: 0; transform: translateY(-20
     filter: contrast(1.1);
 }
 
-/* Typography - Restored to clean Plus Jakarta Sans */
+/* Typography - Fully Restored Original Clean Font */
 .main-hero-card h1 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     letter-spacing: -0.5px;
     margin-bottom: 0.5rem;
-    line-height: 1.1;
+    line-height: 1.15;
 }
 
 body:not(.light-mode) .main-hero-card h1 {
@@ -432,6 +431,6 @@ body:not(.light-mode) .social-links a:hover { color: #000; }
     justify-content: center;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #000;
 }
