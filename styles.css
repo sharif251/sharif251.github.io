@@ -86,7 +86,7 @@ body.light-mode .theme-toggle .moon-icon { opacity: 0; transform: translateY(-20
     position: fixed;
     top: 20px;
     left: 15px;
-    right: 70px; /* leaves room for the theme toggle button */
+    right: 70px;
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -97,7 +97,7 @@ body.light-mode .theme-toggle .moon-icon { opacity: 0; transform: translateY(-20
     gap: 8px;
     z-index: 100;
     overflow-x: auto;
-    scrollbar-width: none; /* Hide scrollbar for clean look */
+    scrollbar-width: none;
 }
 
 .glass-nav::-webkit-scrollbar {
@@ -200,11 +200,12 @@ body.light-mode .theme-toggle .moon-icon { opacity: 0; transform: translateY(-20
     filter: contrast(1.1);
 }
 
-/* Typography & Cloister Black Font for Name */
+/* Typography - Restored to clean Plus Jakarta Sans */
 .main-hero-card h1 {
-    font-family: 'UnifrakturMaguntia', cursive, serif;
-    font-size: 3rem;
-    letter-spacing: 1px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 2.6rem;
+    letter-spacing: -0.5px;
     margin-bottom: 0.5rem;
     line-height: 1.1;
 }
@@ -410,7 +411,7 @@ body:not(.light-mode) .social-links a:hover { color: #000; }
     transform: scale(1.1);
 }
 
-/* Mini Game UI & Cloister Black 'N' Ball */
+/* Mini Game UI */
 #game-trigger:hover {
     color: var(--accent) !important;
 }
@@ -429,7 +430,8 @@ body:not(.light-mode) .social-links a:hover { color: #000; }
     
     align-items: center;
     justify-content: center;
-    font-family: 'UnifrakturMaguntia', cursive, serif;
-    font-size: 1.4rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
     color: #000;
 }
