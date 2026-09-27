@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N Muhammad Sharif | 3D Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <canvas id="webgl-canvas"></canvas>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+        <i class="fa-solid fa-sun sun-icon"></i>
+        <i class="fa-solid fa-moon moon-icon"></i>
+    </button>
+
+    <nav class="glass-nav">
+        <a href="#section-1" class="nav-pill">Home</a>
+        <a href="#section-2" class="nav-pill">Skills</a>
+        <a href="#section-3" class="nav-pill">Project</a>
+        <a href="#section-4" class="nav-pill">About me</a>
+        <a href="#section-5" class="nav-pill">Contact</a>
+    </nav>
+
+    <div class="scroll-container">
+        
+        <section class="panel center-align" id="section-1">
+            <div class="hero-container">
+                <div class="profile-wrapper" onclick="openLightbox()" style="cursor: pointer;" title="Click to enlarge">
+                    <img src="me.png" alt="My Photo" class="hero-photo">
+                </div>
+                
+                <div class="content-box glass main-hero-card">
+                    <h1>N. Muhammad Sharif</h1>
+                    <p class="subtitle">Computer Science & Business System</p>
+                    <p class="tagline">Scroll to explore <i class="fa-solid fa-arrow-down-long blink"></i></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel right-align" id="section-2">
+            <div class="content-box glass">
+                <h2>Skills & Training</h2>
+                <ul class="exp-list">
+                    <li><i class="fa-solid fa-shield-halved"></i> <strong>PortSwigger Web Security:</strong> Vulnerability mitigation.</li>
+                    <li><i class="fa-brands fa-linux"></i> <strong>Linux:</strong> Core basics, command-line tools, and environments.</li>
+                    <li><i class="fa-brands fa-python"></i> <strong>Python:</strong> Scripting, logic, and basic automation.</li>
+                    <li><i class="fa-solid fa-code"></i> <strong>Core Logic:</strong> C, C++, Data Structures, Algorithms.</li>
+                    <li><i class="fa-solid fa-pen-nib"></i> <strong>UI/UX:</strong> Interface design and user experience fundamentals.</li>
+                    <li><i class="fa-solid fa-chalkboard-user"></i> <strong>Naan Mudhalvan:</strong> Mentoring and skill development.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="panel left-align" id="section-3">
+            <div class="content-box glass">
+                <h2>Projects</h2>
+                
+                <a href="https://github.com/sharif251/Smartprocure" target="_blank" style="text-decoration: none;">
+                    <div class="project-highlight">
+                        <div class="project-header">
+                            <h3><i class="fa-solid fa-code-branch" style="color: var(--accent); margin-right: 8px;"></i> Smartprocure</h3>
+                        </div>
+                        <p style="font-size: 0.95rem; margin-bottom: 0; color: var(--text-muted); line-height: 1.6;">Actively developing minimal interfaces, interactive frontend experiences, and secure backend logic for this repository.</p>
+                    </div>
+                </a>
+
+                <div class="project-highlight">
+                    <div class="project-header">
+                        <h3><i class="fa-solid fa-rocket" style="color: #ec4899; margin-right: 8px;"></i> Stealth Project</h3>
+                        <span class="status-tag upcoming-tag">UPCOMING</span>
+                    </div>
+                    <p style="font-size: 0.95rem; margin-bottom: 0; color: var(--text-muted); line-height: 1.6;">Architecting a new application. Core features and logic are currently being mapped out in the lab.</p>
+                </div>
+
+                <p style="margin-top: 1.5rem;">Developing high-performance WebGL applications and maintaining active contributions on GitHub.</p>
+            </div>
+        </section>
+
+        <section class="panel right-align" id="section-4">
+            <div class="content-box glass">
+                <h2>About Me</h2>
+                <p>I am an undergraduate student pursuing a Computer Science and Business Systems degree at PTR College of Engineering and Technology. As an aspiring software engineer, I am passionate about building practical software solutions, exploring web security vulnerabilities through hands-on platforms like PortSwigger's Web Security Academy, and managing development projects on GitHub.
+
+Combining technical proficiency with an eye for business systems, I enjoy tackling complex challenges and continuously sharpening my skills across various domains of software development.</p>
+            </div>
+        </section>
+
+        <section class="panel center-align" id="section-5">
+            <div class="content-box glass contact-card">
+                <h2>Initialize Connection</h2>
+                <p style="margin-bottom: 1.5rem;">Let's build a project together.</p>
+                
+                <form class="contact-form" onsubmit="sendEmail(event)">
+                    <input type="text" id="senderName" placeholder="Your Name" required>
+                    <input type="email" id="senderEmail" placeholder="Your Email" required>
+                    <textarea id="senderMessage" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+
+                <div class="social-links">
+                    <a href="https://github.com/sharif251" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://linkedin.com/in/sharif251" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://instagram.com/sharif251_" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                </div>
+
+                <div style="margin-top: 2.5rem; text-align: center; display: flex; flex-direction: column; gap: 12px;">
+                    <p id="game-trigger" onclick="toggleMiniGame()" style="font-size: 0.85rem; color: var(--text-muted); cursor: pointer; transition: color 0.3s;">
+                        <i class="fa-solid fa-gamepad"></i> Bored? Initialize Mini-Game.
+                    </p>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); opacity: 0.7;">
+                        <i class="fa-solid fa-arrow-down"></i> Press 'G' on your keyboard to see the magic and press 'G' again.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="game-node"></div>
+
+    <div id="photo-lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img src="me.png" alt="Profile Full" class="lightbox-img">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    
+    <script src="scene.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
